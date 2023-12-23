@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react'
+import './App.css'
+import { Header } from './Components/Header'
+import { Route, Switch } from 'react-router-dom'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Footer from './Components/Footer'
+import Services from './Pages/Services'
+import { WhatsAppOutlined } from '@ant-design/icons'
+import { Button } from 'antd'
+import { Club } from './Pages/Club'
+import { Professionals } from './Pages/Professionals'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div className="page">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/club" component={Club} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/professionals" component={Professionals} />
+        </Switch>
+      </div>
+      <div className="fixed-wpp-button">
+        <Button target="_blank" type="link" href='https://wa.me/5531975013830'>
+          <WhatsAppOutlined />
+        </Button>
+      </div>
+      <Footer />
     </div>
-  );
+  )
 }
-
-export default App;

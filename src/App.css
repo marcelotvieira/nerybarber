@@ -1,38 +1,719 @@
-.App {
+:root {
+  --background-image: url("./assets/images/bg5.jpg");
+  --foreground-color: 240, 240, 240;
+  --foreground2-color: 140, 140, 140;
+  --callout-rgb: 30, 30, 30;
+  --primary-rgb: 242 116 5;
+  --primary-soft-rgb: 230, 152, 32;
+  --white: 245, 245, 245;
+}
+
+body {
+  background-repeat: no-repeat;
+  background: radial-gradient(rgba(27, 27, 27, 0.7), rgba(27, 27, 27, 0.7)), var(--background-image);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.club-resume {
+  padding: 3rem 0;
+}
+
+.copy2 {
+  font-size: 12px;
+  color: rgb(var(--foreground2-color));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(var(--foreground-color));
+  font-family: "Barlow", sans-serif;
+}
+
+.fixed-wpp-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(var(--callout-rgb));
+  z-index: 99;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: jump 1.5s ease-in-out infinite;
+}
+.fixed-wpp-button .ant-btn {
+  border-radius: 50% !important;
+  padding: 2.25rem 1rem !important;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.fixed-wpp-button .anticon {
+  font-size: 2.5rem;
+}
+
+footer {
+  gap: 5rem;
+  padding: 3rem 2rem;
+  margin: 2rem 0 0 0 !important;
+  background: linear-gradient(to bottom, transparent, rgb(var(--primary-rgb)));
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer p {
+  max-width: 300px;
+  font-size: 12px;
+}
+
+.ant-btn-icon {
+  font-size: 2rem;
+}
+
+.ant-card {
+  transition: 0.1s linear;
+  border-top: 4px solid rgb(var(--primary-rgb));
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 5rem;
+  overflow: hidden;
+}
+.ant-card:hover {
+  scale: 1.015;
+  box-shadow: 0px 0.5rem 6px rgba(0, 0, 0, 0.15);
+}
+
+.ant-card,
+.ant-card-body {
+  background: rgb(var(--callout-rgb)) !important;
+}
+.ant-card .ant-card-meta-title,
+.ant-card .ant-card-meta-description,
+.ant-card-body .ant-card-meta-title,
+.ant-card-body .ant-card-meta-description {
+  color: rgb(var(--foreground-color)) !important;
+}
+
+.ant-btn {
+  background: none;
+  border-radius: 0.4rem !important;
+  border: none !important;
+}
+
+.ant-btn-primary {
+  background-color: rgb(var(--primary-rgb)) !important;
+}
+.ant-btn-primary .ant-btn-icon {
+  font-size: unset !important;
+}
+.ant-btn-primary:hover {
+  background-color: rgb(var(--primary-soft-rgb)) !important;
+}
+
+.btn-enphasys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  padding: 1.25rem 2rem;
+}
+.btn-enphasys span {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.presentation {
+  height: 70vh;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia2.jpeg);
+  background-position: center;
+  display: flex !important;
+  align-items: center;
+  padding: 0 20%;
+}
+.presentation.pres2 {
+  background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia1.jpeg);
+  background-position: center;
+}
+.presentation * {
+  animation: presentationContent 2s;
+}
+.presentation h1 {
+  font-size: 5rem;
+  text-shadow: 0px 0px 1rem black;
+}
+.presentation p {
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  text-shadow: 2px 2px 3px black;
+  padding: 1rem;
+}
+.presentation p button {
+  margin: 2rem !important;
+}
+
+@keyframes presentationContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.club-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: rgb(var(--primary-rgb)) !important;
+  border-radius: 0.2rem;
+}
+
+.plans .column {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.05));
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  transition: 0.2s;
+}
+.plans .column:hover {
+  transform: translateY(-0.25rem);
+}
+.plans span.price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(var(--primary-rgb));
+}
+
+.width-limited {
+  max-width: 1388px;
+  margin: auto;
+}
+
+.box {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.1rem;
+}
+
+.main-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0));
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+}
+.main-header .header-wrapper {
+  max-width: 1388px;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.main-header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.main-header .menu-btn {
+  display: none;
+}
+
+.menu-list {
+  list-style: none;
+}
+.menu-list a {
+  text-decoration: none;
+  color: unset;
+}
+
+.logo-wrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+}
+.logo-wrapper img {
+  max-width: 8rem;
+}
+.logo-wrapper span {
+  transform: rotateY(-2deg);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 40px 8px rgba(0, 0, 0, 0.45));
+}
+
+.page.margedTop {
+  margin-top: 10rem;
+}
+
+.about-image-grid-item {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  min-width: 12rem;
+  max-width: 12rem;
+  max-height: 8rem;
+  min-height: 8rem;
+}
+
+h1.title,
+h2 {
+  padding: 1rem;
+}
+
+.column {
+  width: 340px;
+}
+
+.about.structure {
+  padding: 2rem 0;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia2.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.about ul {
+  font-weight: 500;
+}
+.about ul li {
+  margin: 1rem 0;
+}
+.about p {
+  min-width: 340px;
+  text-shadow: 0px 0px 0.25rem black;
+  padding: 0 1rem;
+}
+.about a {
+  margin: 1rem;
+}
+.about h1 {
+  padding: 0 1rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.about .about-image {
+  content: "";
+  display: block;
+  width: 20rem;
+  max-width: 20rem;
+  min-height: 20rem;
+  border-radius: 2rem;
+  border-top: 4px solid rgb(var(--primary-rgb));
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 5rem;
+  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Barbearia1-portrait.jpeg);
+  filter: contrast(1.15);
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+}
+.about .about-image.barbershop {
+  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Barbearia1-portrait.jpeg);
+}
+.about .about-image.service {
+  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Bancada1.jpeg);
+}
+.about .about-image.confort {
+  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Ambiente.jpeg);
+}
+.about .about-image.environment {
+  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Hall2.jpeg);
+  background-position: right !important;
+}
+
+@keyframes jump {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 8px rgb(var(--primary-rgb));
+  }
+  40% {
+    transform: translateY(-10px);
+    box-shadow: 0 0 12px rgb(var(--primary-soft-rgb));
+  }
+  60% {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgb(var(--primary-soft-rgb));
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgb(var(--primary-rgb));
+  }
+  50% {
+    transform: scale(1.07);
+    box-shadow: 0 0 12px rgb(var(--primary-soft-rgb));
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgb(var(--primary-rgb));
+  }
+}
+@keyframes animarCartao {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0) translateX(0);
+    filter: drop-shadow(2rem 4rem 0.7rem rgba(0, 0, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(-2rem -2rem 0.7rem rgba(0, 0, 0, 0.3));
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg) translateZ(0px) translateX(0px);
+    filter: drop-shadow(2rem 4rem 0.7rem rgba(0, 0, 0, 0.3));
+  }
+}
+@keyframes animarCartaoMobile {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0) translateX(0) scale(0.8);
+    filter: drop-shadow(2rem 4rem 0.7rem rgba(0, 0, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(-2rem -2rem 0.7rem rgba(0, 0, 0, 0.3));
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg) translateZ(0px) translateX(0px) scale(0.8);
+    filter: drop-shadow(2rem 4rem 0.7rem rgba(0, 0, 0, 0.3));
+  }
+}
+.partner-image {
+  height: 80px;
+}
+
+.ant-divider {
+  border-color: rgb(var(--foreground2-color));
+  max-width: 60% !important;
+  min-width: 60% !important;
+}
+
+.club-card-wrapper {
+  transition: 0.3s;
+  box-shadow: 0px 0px 1px rgb(var(--primary-soft-rgb));
+  height: 18rem;
+  width: 26rem;
+  overflow: hidden;
+  max-width: 320px;
+  max-height: 200px;
+  display: flex;
+  background-color: #101010;
+  border-radius: 1rem;
+  justify-content: center;
+  animation: animarCartao 5s ease-in-out infinite;
+  filter: drop-shadow(2rem 4rem 0.7rem rgba(0, 0, 0, 0.3));
+  animation-delay: 1s;
+}
+.club-card-wrapper .tracks,
+.club-card-wrapper .club-logo-wrapper {
+  max-width: 5.5rem;
+  min-width: 5.5rem;
+}
+.club-card-wrapper .tracks {
+  display: flex;
+}
+.club-card-wrapper .tracks span {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 6px;
+  background-color: rgb(var(--primary-rgb));
+}
+.club-card-wrapper .tracks span:before {
+  content: "";
+  display: flex;
+  width: 1rem;
+  height: 100%;
+  background-color: rgb(var(--primary-rgb));
+  margin-left: 12px;
+}
+.club-card-wrapper .nery-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+.club-card-wrapper .nery-logo-wrapper img {
+  max-width: 8rem;
+}
+.club-card-wrapper .club-logo-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+.club-card-wrapper .club-logo-wrapper .club-logo {
+  max-height: 1.5rem;
+}
+
+.professional p {
+  max-width: 360px;
+}
+.professional ul {
+  margin: 2rem auto;
+  width: 40vw;
+  min-width: 280px;
+  padding: 0 1rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border-radius: 0.2rem;
+}
+.professional ul p {
+  color: rgb(var(--primary-rgb));
+}
+.professional ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgb(var(--foreground2-color));
+  padding: 0.5rem 0;
+}
+.professional ul span.price {
+  text-align: right;
+}
+.professional table {
+  padding: 0.5rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.1));
+  border-radius: 0.2rem;
+}
+.professional table th {
+  padding: 0 0.5rem;
+  text-align: left;
+  color: rgb(var(--primary-rgb));
+}
+.professional table td {
+  padding: 0 0.5rem;
+}
+.professional img.professional-avatar {
+  filter: drop-shadow(0.6rem -0.4rem 0px rgb(var(--primary-rgb)));
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 360px;
+  height: 360px;
+  max-width: 400px;
+  image-rendering: optimizeSpeed;
+  image-orientation: from-image;
+  border-radius: 50%;
+}
+
+span.anticon {
+  font-size: 22px;
+}
+
+.pd1 {
+  padding: 1rem;
+}
+
+.pd0-1 {
+  padding: 0 1rem;
+}
+
+.mg1 {
+  margin: 1rem auto !important;
+}
+
+.mg2 {
+  margin: 2rem auto !important;
+}
+
+.professionals-resume {
+  padding: 3rem 0;
+  background: linear-gradient(rgba(30, 30, 30, 0.95), rgba(30, 30, 30, 0.95)), url(../src/assets/images/logo300.png);
+}
+
+.container {
+  width: 100%;
+  margin: 6rem auto;
+}
+.container.flex {
+  display: flex;
+}
+.container.flex.columned {
+  flex-direction: column;
+}
+.container.flex.gap1 {
+  gap: 1rem;
+}
+.container.flex.gap2 {
+  gap: 2rem;
+}
+.container.flex.gap3 {
+  gap: 3rem;
+}
+.container.aligned-center {
+  align-items: center;
+}
+.container.justified-center {
+  justify-content: center !important;
+}
+.container.wrappable {
+  flex-wrap: wrap;
+}
+.container.wrappable-reversed {
+  flex-wrap: wrap-reverse;
+}
+.container h1 {
+  font-weight: 400 !important;
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none !important;
+}
+
+.text-centered {
+  text-align: center;
+  max-width: 600px;
+}
+
+.schedule-invite-panel {
+  width: 100%;
+  background: radial-gradient(rgba(222, 106, 5, 0.15), rgba(222, 106, 5, 0.3)), url(./assets/images/CorteHD.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36vh;
+}
+
+.service-image {
+  filter: hue-rotate(0deg) saturate(140%) brightness(0.85);
+}
+
+.service-name-coin {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+  .container .title {
+    font-size: 1.6rem !important;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h2 {
+    font-size: 1.2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .professional img.professional-avatar {
+    padding: 1rem;
+    border: 1px solid white;
+    filter: drop-shadow(0.6rem -0.2rem 0px rgb(var(--primary-rgb)));
+    width: 280px;
+    height: 280px;
   }
-}
+  .plans .column:hover {
+    transform: none;
+  }
+  .partner-image {
+    height: 40px;
+  }
+  .club-card-wrapper {
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0) translateX(0) scale(0.8);
+    animation: animarCartaoMobile 5s ease-in-out infinite;
+  }
+  @keyframes animarCartao {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+  span.anticon {
+    font-size: unset;
+  }
+  h1 {
+    font-size: 1.3rem !important;
+  }
+  .logo-wrapper img {
+    max-width: 3.5rem;
+  }
+  .container {
+    margin: 1rem auto;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  .menu-list li {
+    margin-bottom: 2.5rem;
+  }
+  .page.margedTop {
+    margin-top: 7rem;
+  }
+  .presentation {
+    height: 80vh;
+    flex-wrap: wrap;
+    padding: 5rem 10%;
+    gap: 1rem;
+    align-items: center;
+    background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia1-portrait.jpeg);
+  }
+  .presentation.pres2 {
+    background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia2-portrait.jpeg);
+  }
+  .presentation h1 {
+    font-size: 3rem !important;
+    text-shadow: 0px 0px 1rem black;
+  }
+  .presentation p {
+    font-size: 1rem;
+    max-width: 100%;
+    text-shadow: 0px 0px 0.5rem black;
+  }
+  .about-image-grid-item {
+    border: 1px solid white;
+    max-width: 5.8rem;
+    min-width: 5.8rem;
+    max-height: 4rem;
+    min-height: 4rem;
+  }
+  .club-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 0.3rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 4rem 2rem 1rem 2rem;
+    gap: 2rem;
+  }
+  footer ul {
+    gap: 0.5rem;
+  }
+  .fixed-wpp-button {
+    bottom: 0.25rem;
+    right: 0.25rem;
+  }
+  .fixed-wpp-button .ant-btn {
+    padding: 2rem 1rem !important;
+  }
+  .fixed-wpp-button .anticon {
+    font-size: 2rem;
+  }
+  .main-header ul {
+    display: none;
+  }
+  .main-header .menu-btn {
+    display: block;
+  }
+}/*# sourceMappingURL=App.css.map */
