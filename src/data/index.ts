@@ -384,16 +384,16 @@ export const professionals: Professional[] = [
     priceTable: ramonPrices
 
   },
-  {
-    firstName: 'Diego',
-    lastName: 'Nery',
-    picture: require('../assets/images/diego.png'),
-    portfolio: [
+  // {
+  //   firstName: 'Diego',
+  //   lastName: 'Nery',
+  //   picture: require('../assets/images/diego.png'),
+  //   portfolio: [
 
-    ],
-    priceTable: diegoPrices
+  //   ],
+  //   priceTable: diegoPrices
 
-  },
+  // },
 ]
 
 export const barberPics: any[] = [
