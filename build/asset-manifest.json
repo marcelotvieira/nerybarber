@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6208e5b9.css",
-    "main.js": "/static/js/main.804ddb68.js",
+    "main.js": "/static/js/main.1d33b6b1.js",
     "static/js/787.cc5ddf07.chunk.js": "/static/js/787.cc5ddf07.chunk.js",
     "static/media/Hall2.jpeg": "/static/media/Hall2.9bc8ab49c78b53f83d02.jpeg",
     "static/media/Barbearia1-portrait.jpeg": "/static/media/Barbearia1-portrait.23f8c1713f4810965623.jpeg",
@@ -41,11 +41,11 @@
     "static/media/barber-brush-svgrepo-com.svg": "/static/media/barber-brush-svgrepo-com.342acc26955d4f0e7d17856b135cb791.svg",
     "index.html": "/index.html",
     "main.6208e5b9.css.map": "/static/css/main.6208e5b9.css.map",
-    "main.804ddb68.js.map": "/static/js/main.804ddb68.js.map",
+    "main.1d33b6b1.js.map": "/static/js/main.1d33b6b1.js.map",
     "787.cc5ddf07.chunk.js.map": "/static/js/787.cc5ddf07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6208e5b9.css",
-    "static/js/main.804ddb68.js"
+    "static/js/main.1d33b6b1.js"
   ]
 }
