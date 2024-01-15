@@ -340,7 +340,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Diego',
     lastName: 'Nery',
-    picture: require('../assets/images/diego.png'),
+    picture: require('../assets/images/Diego.png'),
     portfolio: [
 
     ],
@@ -349,7 +349,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Samuel',
     lastName: 'Tadeu',
-    picture: require('../assets/images/samuel.png'),
+    picture: require('../assets/images/SamuelTadeu.png'),
     portfolio: [
 
     ],
@@ -358,7 +358,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Samuel',
     lastName: 'Pedro',
-    picture: require('../assets/images/samuel1.png'),
+    picture: require('../assets/images/SamuelPedro.png'),
     portfolio: [
 
     ],
@@ -367,7 +367,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Igor',
     lastName: 'Augustus',
-    picture: require('../assets/images/igor.png'),
+    picture: require('../assets/images/Igor.png'),
     portfolio: [
 
     ],
@@ -377,23 +377,23 @@ export const professionals: Professional[] = [
   {
     firstName: 'Ramon',
     lastName: 'Eduardo',
-    picture: require('../assets/images/ramon.png'),
+    picture: require('../assets/images/Ramon.png'),
     portfolio: [
 
     ],
     priceTable: ramonPrices
 
   },
-  // {
-  //   firstName: 'Diego',
-  //   lastName: 'Nery',
-  //   picture: require('../assets/images/diego.png'),
-  //   portfolio: [
+  {
+    firstName: 'Janielle',
+    lastName: 'Paixão',
+    picture: require('../assets/images/Janielle.png'),
+    portfolio: [
 
-  //   ],
-  //   priceTable: diegoPrices
+    ],
+    priceTable: ramonPrices
 
-  // },
+  },
 ]
 
 export const barberPics: any[] = [
