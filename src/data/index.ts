@@ -391,7 +391,7 @@ export const professionals: Professional[] = [
     portfolio: [
 
     ],
-    priceTable: ramonPrices
+    priceTable: samuelTadeuPrices
 
   },
 ]
