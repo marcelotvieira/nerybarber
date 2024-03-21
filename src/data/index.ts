@@ -1,17 +1,16 @@
-import { JsxElement } from 'typescript'
-import Corte from '../assets/images/Corte.jpg'
+import Acabamento from '../assets/images/Acabamento.jpg'
 import Barba from '../assets/images/Barba.jpg'
 import Barboterapia from '../assets/images/Barboterapia.jpg'
-import Tintura from '../assets/images/Tintura.jpg'
-import Selagem from '../assets/images/Selagem.jpg'
-import Relaxamento from '../assets/images/Relaxamento.jpg'
+import Corte from '../assets/images/Corte.jpg'
 import Hidratacao from '../assets/images/Hidratacao.jpg'
-import Cone from '../assets/images/cone.jpg'
-import Acabamento from '../assets/images/Acabamento.jpg'
 import Infantil from '../assets/images/Infantil.jpg'
-import Sobrancelha from '../assets/images/Sobrancelha.jpg'
-import Pele from '../assets/images/Pele.jpg'
 import Luzes from '../assets/images/Luzes.jpg'
+import Pele from '../assets/images/Pele.jpg'
+import Relaxamento from '../assets/images/Relaxamento.jpg'
+import Selagem from '../assets/images/Selagem.jpg'
+import Sobrancelha from '../assets/images/Sobrancelha.jpg'
+import Tintura from '../assets/images/Tintura.jpg'
+import Cone from '../assets/images/cone.jpg'
 
 
 type Service = {
@@ -208,7 +207,7 @@ type Plan = {
 export const plans: Plan[] = [
   {
     name: 'Corte & Barba Club',
-    price: 154.90,
+    price: 174.90,
     description: 'Imagem pessoal impecável',
     benefits: [
       {
@@ -248,7 +247,7 @@ export const plans: Plan[] = [
   },
   {
     name: 'Corte Club',
-    price: 94.90,
+    price: 109.90,
     description: 'Cabelo sempre alinhado',
     benefits: [
       {
@@ -288,7 +287,7 @@ export const plans: Plan[] = [
   },
   {
     name: 'Barba Club',
-    price: 89.90,
+    price: 99.90,
     description: 'Fazer a barba em casa nunca mais!',
     benefits: [
       {
