@@ -182,11 +182,23 @@ a {
   border-radius: 0.2rem;
 }
 
+.plans {
+  max-width: 1300px;
+}
 .plans .column {
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.05));
   border: 1px solid transparent;
   border-radius: 0.2rem;
   transition: 0.2s;
+}
+.plans .column .anticon {
+  opacity: 0.35;
+}
+.plans .column .anticon.anticon-check-circle {
+  opacity: 1 !important;
+}
+.plans .column .anticon.anticon-check-circle svg {
+  fill: rgb(var(--primary-rgb)) !important;
 }
 .plans .column:hover {
   transform: translateY(-0.25rem);

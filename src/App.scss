@@ -206,6 +206,7 @@ a {
 }
 
 .plans {
+  max-width: 1300px;
 
   .column {
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.05));
@@ -213,9 +214,22 @@ a {
     border-radius: .2rem;
     transition: .2s;
 
+    .anticon {
+      opacity: .35;
+
+      &.anticon-check-circle {
+        opacity: 1 !important;
+
+        svg {
+          fill: rgb(var(--primary-rgb)) !important;
+        }
+      }
+    }
+
     &:hover {
       transform: translateY(-.25rem);
     }
+
 
   }
 

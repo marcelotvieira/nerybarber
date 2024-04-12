@@ -202,72 +202,42 @@ type Plan = {
   price: number
   description: string
   benefits: Benefit[]
+  source: string
 }
 
 export const plans: Plan[] = [
   {
-    name: 'Corte & Barba Club',
-    price: 174.90,
-    description: 'Imagem pessoal impecável',
+    name: 'Economy',
+    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/economy/19',
+    price: 79.90,
+    description: 'Escolha um plano que combine com você.',
     benefits: [
       {
-        name: 'Corte ilimitado',
+        name: 'Corte ilimitado (seg a quarta)',
         active: true,
       },
       {
-        name: 'Barba ilimitada',
-        active: true,
-      },
-      {
-        name: 'Acabamento ilimitado (pezinho)',
-        active: true,
-      },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
-      {
-        name: 'Telemedicina',
-        active: true,
-      },
-      {
-        name: 'Benefícios com mais de 30.000 Empresas',
-        active: true,
-      },
-      {
-        name: 'TV Gratuita no App',
-        active: true,
-      },
-      {
-        name: 'Intransferível',
-        active: true,
-      },
-
-    ]
-  },
-  {
-    name: 'Corte Club',
-    price: 109.90,
-    description: 'Cabelo sempre alinhado',
-    benefits: [
-      {
-        name: 'Corte ilimitado',
-        active: true,
-      },
-      {
-        name: 'Barba ilimitada',
+        name: 'Barba ilimitada (seg a quarta)',
         active: false,
       },
       {
-        name: 'Acabamento ilimitado (pezinho)',
+        name: 'Acabamento pezinho (seg a quarta)',
         active: true,
+      },
+      {
+        name: 'Corte ilimitado',
+        active: false,
+      },
+      {
+        name: 'Barba Express ilimitada',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho ilimitado',
+        active: false,
       },
       {
         name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
-      {
-        name: 'Telemedicina',
         active: true,
       },
       {
@@ -279,35 +249,151 @@ export const plans: Plan[] = [
         active: true,
       },
       {
+        name: 'Sorteios Exclusivos',
+        active: true,
+      },
+      {
         name: 'Intransferível',
         active: true,
       },
-
     ]
   },
   {
-    name: 'Barba Club',
+    name: 'Prime',
+    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/prime/18',
+    price: 139.90,
+    description: 'Escolha um plano que combina com você.',
+    benefits: [
+      {
+        name: 'Corte ilimitado (seg a quarta)',
+        active: true,
+      },
+      {
+        name: 'Barba ilimitada (seg a quarta)',
+        active: true,
+      },
+      {
+        name: 'Acabamento pezinho (seg a quarta)',
+        active: true,
+      },
+      {
+        name: 'Corte ilimitado',
+        active: false,
+      },
+      {
+        name: 'Barba Express ilimitada',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho ilimitado',
+        active: false,
+      },
+      {
+        name: 'Desconto em Produtos e Serviços',
+        active: true,
+      },
+      {
+        name: 'Benefícios com mais de 30.000 Empresas',
+        active: true,
+      },
+      {
+        name: 'TV Gratuita no App',
+        active: true,
+      },
+      {
+        name: 'Sorteios Exclusivos',
+        active: true,
+      },
+      {
+        name: 'Intransferível',
+        active: true,
+      },
+    ]
+  },
+  {
+    name: 'Black',
+    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/black/17',
+    price: 154.90,
+    description: 'Escolha um plano que combine com você.',
+    benefits: [
+      {
+        name: 'Corte ilimitado (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Barba ilimitada (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Corte ilimitado',
+        active: true,
+      },
+      {
+        name: 'Barba Express ilimitada',
+        active: true,
+      },
+      {
+        name: 'Acabamento pezinho ilimitado',
+        active: true,
+      },
+      {
+        name: 'Desconto em Produtos e Serviços',
+        active: true,
+      },
+      {
+        name: 'Benefícios com mais de 30.000 Empresas',
+        active: true,
+      },
+      {
+        name: 'TV Gratuita no App',
+        active: true,
+      },
+      {
+        name: 'Sorteios Exclusivos',
+        active: true,
+      },
+      {
+        name: 'Intransferível',
+        active: true,
+      },
+    ]
+  },
+  {
+    name: 'Platinum',
+    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/platinum/16',
     price: 99.90,
-    description: 'Fazer a barba em casa nunca mais!',
+    description: 'Escolha um plano que combine com você.',
     benefits: [
+      {
+        name: 'Corte ilimitado (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Barba ilimitada (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho (seg a quarta)',
+        active: false,
+      },
       {
         name: 'Corte ilimitado',
         active: false,
       },
       {
-        name: 'Barba ilimitada',
+        name: 'Barba Express ilimitada',
         active: true,
       },
       {
-        name: 'Acabamento ilimitado (pezinho)',
+        name: 'Acabamento pezinho ilimitado',
         active: false,
       },
       {
         name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
-      {
-        name: 'Telemedicina',
         active: true,
       },
       {
@@ -319,11 +405,68 @@ export const plans: Plan[] = [
         active: true,
       },
       {
+        name: 'Sorteios Exclusivos',
+        active: true,
+      },
+      {
         name: 'Intransferível',
         active: true,
       },
     ]
   },
+  {
+    name: 'Gold',
+    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/gold/15',
+    price: 94.90,
+    description: 'Escolha um plano que combine com você.',
+    benefits: [
+      {
+        name: 'Corte ilimitado (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Barba ilimitada (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Corte ilimitado',
+        active: true,
+      },
+      {
+        name: 'Barba Express ilimitada',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho ilimitado',
+        active: true,
+      },
+      {
+        name: 'Desconto em Produtos e Serviços',
+        active: true,
+      },
+      {
+        name: 'Benefícios com mais de 30.000 Empresas',
+        active: true,
+      },
+      {
+        name: 'TV Gratuita no App',
+        active: true,
+      },
+      {
+        name: 'Sorteios Exclusivos',
+        active: true,
+      },
+      {
+        name: 'Intransferível',
+        active: true,
+      },
+    ]
+  },
+
 
 ]
 
