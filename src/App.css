@@ -1,16 +1,22 @@
 :root {
   --background-image: url("./assets/images/bg5.jpg");
-  --foreground-color: 240, 240, 240;
+  --foreground-color: 210, 210, 210;
   --foreground2-color: 140, 140, 140;
-  --callout-rgb: 30, 30, 30;
-  --primary-rgb: 242 116 5;
+  --callout-rgb: 24, 24, 24;
+  --primary-rgb: 210, 172, 71;
+  --primary-rgba: 210, 172, 71, 0.5;
+  --gold-rgb-1: 174, 134, 37;
+  --gold-rgb-2: 247, 239, 138;
+  --background-rgb: 10, 10, 10;
+  --gold-rgb-3: 210, 172, 71;
+  --gold-rgb-4: 237, 201, 103;
   --primary-soft-rgb: 230, 152, 32;
   --white: 245, 245, 245;
 }
 
 body {
   background-repeat: no-repeat;
-  background: radial-gradient(rgba(27, 27, 27, 0.7), rgba(27, 27, 27, 0.7)), var(--background-image);
+  background: radial-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), var(--background-image);
   background-size: cover;
   min-height: 100vh;
 }
@@ -57,7 +63,7 @@ footer {
   gap: 5rem;
   padding: 3rem 2rem;
   margin: 2rem 0 0 0 !important;
-  background: linear-gradient(to bottom, transparent, rgb(var(--primary-rgb)));
+  background: linear-gradient(to bottom, transparent, rgba(var(--primary-rgba))) !important;
 }
 footer ul {
   display: flex;
@@ -98,15 +104,21 @@ footer p {
 
 .ant-btn {
   background: none;
-  border-radius: 0.4rem !important;
-  border: none !important;
+  border: none;
+  border-radius: 0.1rem !important;
 }
 
 .ant-btn-primary {
-  background-color: rgb(var(--primary-rgb)) !important;
+  background: linear-gradient(45deg, #AE8625, #F7EF8A, #D2AC47, #EDC967) !important;
+}
+.ant-btn-primary span {
+  color: rgb(35, 44, 25) !important;
 }
 .ant-btn-primary .ant-btn-icon {
   font-size: unset !important;
+}
+.ant-btn-primary .ant-btn-icon span svg {
+  fill: rgb(var(--background-rgb)) !important;
 }
 .ant-btn-primary:hover {
   background-color: rgb(var(--primary-soft-rgb)) !important;
@@ -134,14 +146,14 @@ a {
   height: 70vh;
   background-size: cover !important;
   background-repeat: no-repeat;
-  background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia2.jpeg);
+  background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia2.jpeg);
   background-position: center;
   display: flex !important;
   align-items: center;
   padding: 0 20%;
 }
 .presentation.pres2 {
-  background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia1.jpeg);
+  background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia1.jpeg);
   background-position: center;
 }
 .presentation * {
@@ -178,7 +190,7 @@ a {
   align-items: center;
   font-weight: 700;
   font-size: 1.2rem;
-  background-color: rgb(var(--primary-rgb)) !important;
+  background-color: linear-gradient(45deg, #AE8625, #F7EF8A, #D2AC47, #EDC967) !important;
   border-radius: 0.2rem;
 }
 
@@ -265,7 +277,7 @@ a {
   padding: 0.5rem;
 }
 .logo-wrapper img {
-  max-width: 8rem;
+  max-width: 6rem;
 }
 .logo-wrapper span {
   transform: rotateY(-2deg);
@@ -278,7 +290,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem;
   filter: drop-shadow(0px 40px 8px rgba(0, 0, 0, 0.45));
+  background: rgba(10, 10, 10, 0.5);
 }
 
 .page.margedTop {
@@ -334,26 +348,26 @@ h2 {
   max-width: 20rem;
   min-height: 20rem;
   border-radius: 2rem;
-  border-top: 4px solid rgb(var(--primary-rgb));
+  border-top: 3px solid rgb(var(--gold-rgb-2));
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 5rem;
-  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Barbearia1-portrait.jpeg);
-  filter: contrast(1.15);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Barbearia1-portrait.jpeg);
+  filter: contrast(110%) brightness(80%);
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat;
 }
 .about .about-image.barbershop {
-  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Barbearia1-portrait.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Barbearia1-portrait.jpeg);
 }
 .about .about-image.service {
-  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Bancada1.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Bancada1.jpeg);
 }
 .about .about-image.confort {
-  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Ambiente.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Ambiente.jpeg);
 }
 .about .about-image.environment {
-  background: radial-gradient(rgba(170, 78, 16, 0), rgba(0, 0, 0, 0)), url(./assets/images/Hall2.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Hall2.jpeg);
   background-position: right !important;
 }
 
@@ -450,14 +464,14 @@ h2 {
   display: block;
   height: 100%;
   width: 6px;
-  background-color: rgb(var(--primary-rgb));
+  background: linear-gradient(rgb(var(--gold-rgb-1)), rgb(var(--gold-rgb-2)), rgb(var(--gold-rgb-3)), rgb(var(--gold-rgb-4)));
 }
 .club-card-wrapper .tracks span:before {
   content: "";
   display: flex;
   width: 1rem;
   height: 100%;
-  background-color: rgb(var(--primary-rgb));
+  background: linear-gradient(rgb(var(--gold-rgb-1)), rgb(var(--gold-rgb-2)), rgb(var(--gold-rgb-3)), rgb(var(--gold-rgb-4)));
   margin-left: 12px;
 }
 .club-card-wrapper .nery-logo-wrapper {
@@ -490,7 +504,7 @@ h2 {
   border-radius: 0.2rem;
 }
 .professional ul p {
-  color: rgb(var(--primary-rgb));
+  color: rgb(var(--gold-rgb-2));
 }
 .professional ul li {
   display: flex;
@@ -515,7 +529,7 @@ h2 {
   padding: 0 0.5rem;
 }
 .professional img.professional-avatar {
-  filter: drop-shadow(0.6rem -0.4rem 0px rgb(var(--primary-rgb)));
+  filter: drop-shadow(0.6rem -0.4rem 0px rgba(var(--primary-rgba)));
   -o-object-fit: cover;
      object-fit: cover;
   width: 360px;
@@ -548,7 +562,8 @@ span.anticon {
 
 .professionals-resume {
   padding: 3rem 0;
-  background: linear-gradient(rgba(30, 30, 30, 0.95), rgba(30, 30, 30, 0.95)), url(../src/assets/images/logo300.png);
+  background: linear-gradient(rgba(15, 15, 15, 0.95), rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.95)), url(../src/assets/images/logo.png);
+  background-size: 220px;
 }
 
 .container {
@@ -598,7 +613,7 @@ ul {
 
 .schedule-invite-panel {
   width: 100%;
-  background: radial-gradient(rgba(222, 106, 5, 0.15), rgba(222, 106, 5, 0.3)), url(./assets/images/CorteHD.jpg);
+  background: linear-gradient(to bottom, rgba(var(--background-rgb)), rgba(var(--gold-rgb-1), 0.1), rgba(var(--gold-rgb-4), 0.1), rgba(var(--background-rgb))), url(./assets/images/CorteHD.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -656,7 +671,7 @@ ul {
     font-size: 1.3rem !important;
   }
   .logo-wrapper img {
-    max-width: 3.5rem;
+    max-width: 3rem;
   }
   .container {
     margin: 1rem auto;
@@ -677,10 +692,10 @@ ul {
     padding: 5rem 10%;
     gap: 1rem;
     align-items: center;
-    background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia1-portrait.jpeg);
+    background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia1-portrait.jpeg);
   }
   .presentation.pres2 {
-    background: radial-gradient(rgba(141, 76, 33, 0.35), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia2-portrait.jpeg);
+    background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia2-portrait.jpeg);
   }
   .presentation h1 {
     font-size: 3rem !important;

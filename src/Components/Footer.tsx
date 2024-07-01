@@ -21,7 +21,7 @@ export default function Footer() {
         </a></li>
       </ul>
 
-      <p><EnvironmentOutlined /> R. José Machado Chaves, 205 - campo santo antonio, Sabará - MG, 34515-120</p>
+      <p><EnvironmentOutlined /> Rua vereador José Maria Moreira, n°465, Bairro Praia dos bandeirantes, Sabará - MG, 34525-010</p>
 
       <p className="text-centered">
         <CopyrightCircleOutlined style={{ fontSize: 16 }} />  Nery Barber

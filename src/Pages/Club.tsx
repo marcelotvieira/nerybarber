@@ -12,7 +12,7 @@ export function Club() {
     <>
       <ScheduleInvitePanel button={{
         label: 'Fazer parte',
-        href: 'https://cashbarber.com.br/nerybarber',
+        href: 'https://app.galaxpay.com.br/landingpage3865984/principal',
       }} />
       <div className="page container flex columned aligned-center">
 

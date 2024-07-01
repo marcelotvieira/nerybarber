@@ -30,7 +30,7 @@ export function Header() {
           <Drawer
             autoFocus
             width={240}
-            drawerStyle={{ backgroundColor: 'rgb(24, 24, 24)' }}
+            drawerStyle={{ backgroundColor: 'rgb(10, 10, 10)' }}
             placement="right"
             onClose={() => setActiveMenu(false)} open={isActiveMenu}
           >

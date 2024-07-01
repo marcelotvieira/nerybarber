@@ -1,5 +1,5 @@
 import * as React from 'react'
-import logo from '../assets/images/logo300.png'
+import logo from '../assets/images/logo.png'
 import clubLogo from '../assets/images/clubLogo.png'
 import { Carousel, Image } from 'antd'
 import { partners } from '../data'

@@ -88,8 +88,9 @@ export default function Home() {
               professionals.map((p) => (
                 <Avatar
                   style={{
+                    borderColor: 'rgb(var(--callout-rgb))',
                     margin: -10, border: '2px solid white',
-                    backgroundColor: 'rgb(242,116,5)'
+                    backgroundImage: 'linear-gradient(45deg, rgb(var(--gold-rgb-1)), rgb(var(--gold-rgb-2)), rgb(var(--gold-rgb-3)), rgb(var(--gold-rgb-4)))'
                   }} key={p.lastName} size={64} src={p.picture} />
               ))
             }
