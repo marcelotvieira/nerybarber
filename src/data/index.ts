@@ -29,7 +29,7 @@ type Partner = {
 const diegoPrices = [
   { name: 'Corte', value: 40 },
   { name: 'Barba Express', value: 30 },
-  { name: 'Barboterapia', value: 35 },
+  { name: 'Barboterapia (Ozônio)', value: 35 },
   { name: 'Sobrancelha', value: 15 },
   { name: 'Acabamento (Pezinho)', value: 18 },
   { name: 'Corte Infantil', value: 40 },
@@ -37,7 +37,7 @@ const diegoPrices = [
   { name: 'Terapia Cone Hindu', value: 34.90 },
   { name: 'Camuflagem', value: 20 },
   { name: 'Tintura', value: 35 },
-  { name: 'Limpeza de Pele', value: 40 },
+  { name: 'Limpeza Facial', value: 40 },
   { name: 'Selagem', value: 70 },
   { name: 'Luzes', value: 85 },
   { name: 'Relaxamento', value: 40 },
@@ -64,7 +64,7 @@ export const variablePrices = [
   'Luzes',
   'Selagem',
   'Relaxamento',
-  'Limpeza de Pele',
+  'Limpeza Facial',
   'Tintura',
   'Hidratação',
 ]
@@ -88,7 +88,7 @@ export const services: Service[] = [
     duration: 40,
   },
   {
-    name: 'Barboterapia',
+    name: 'Barboterapia (Ozônio)',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Relaxe enquanto cuidamos da sua barba, proporcionando uma experiência revigorante.',
     image: Barboterapia,
@@ -152,7 +152,7 @@ export const services: Service[] = [
   },
   {
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
-    name: 'Limpeza de Pele',
+    name: 'Limpeza Facial',
     description: 'Renove sua pele com uma limpeza profunda e relaxante, deixando-a radiante.',
     image: Pele,
     duration: 40,

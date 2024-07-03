@@ -146,14 +146,14 @@ a {
   height: 70vh;
   background-size: cover !important;
   background-repeat: no-repeat;
-  background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia2.jpeg);
+  background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/new_shop2.jpg);
   background-position: center;
   display: flex !important;
   align-items: center;
   padding: 0 20%;
 }
 .presentation.pres2 {
-  background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia1.jpeg);
+  background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/new_shop1.jpg);
   background-position: center;
 }
 .presentation * {
@@ -351,23 +351,23 @@ h2 {
   border-top: 3px solid rgb(var(--gold-rgb-2));
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 5rem;
-  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Barbearia1-portrait.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/new_shop3.jpg);
   filter: contrast(110%) brightness(80%);
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat;
 }
 .about .about-image.barbershop {
-  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Barbearia1-portrait.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/new_shop1.jpg);
 }
 .about .about-image.service {
-  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Bancada1.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/new_shop2.jpg);
 }
 .about .about-image.confort {
-  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Ambiente.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/new_shop3.jpg);
 }
 .about .about-image.environment {
-  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/Hall2.jpeg);
+  background: linear-gradient(45deg, rgba(var(--gold-rgb-1), 0), rgba(var(--gold-rgb-2), 0), rgba(var(--gold-rgb-3), 0), rgba(var(--gold-rgb-4), 0)), url(./assets/images/new_shop4.jpg);
   background-position: right !important;
 }
 
@@ -692,10 +692,10 @@ ul {
     padding: 5rem 10%;
     gap: 1rem;
     align-items: center;
-    background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia1-portrait.jpeg);
+    background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/new_shop1.jpg);
   }
   .presentation.pres2 {
-    background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/Barbearia2-portrait.jpeg);
+    background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/new_shop3.jpg);
   }
   .presentation h1 {
     font-size: 3rem !important;
