@@ -11,6 +11,7 @@ import Selagem from '../assets/images/Selagem.jpg'
 import Sobrancelha from '../assets/images/Sobrancelha.jpg'
 import Tintura from '../assets/images/Tintura.jpg'
 import Cone from '../assets/images/cone.jpg'
+import Nasal from '../assets/images/Nasal.png'
 
 
 type Service = {
@@ -38,6 +39,7 @@ const diegoPrices = [
   { name: 'Camuflagem', value: 20 },
   { name: 'Tintura', value: 35 },
   { name: 'Limpeza Facial', value: 40 },
+  { name: 'Depilação Nasal', value: 24.90 },
   { name: 'Selagem', value: 70 },
   { name: 'Luzes', value: 85 },
   { name: 'Relaxamento', value: 40 },
@@ -155,6 +157,13 @@ export const services: Service[] = [
     name: 'Limpeza Facial',
     description: 'Renove sua pele com uma limpeza profunda e relaxante, deixando-a radiante.',
     image: Pele,
+    duration: 40,
+  },
+  {
+    name: 'Depilação Nasal',
+    icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
+    description: 'Utilizando técnicas seguras e eficazes, remova os pelos indesejados da narina, garantindo conforto e higiêne.',
+    image: Nasal,
     duration: 40,
   },
   {
