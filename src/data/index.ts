@@ -28,31 +28,32 @@ type Partner = {
 }
 
 const diegoPrices = [
-  { name: 'Corte', value: 40 },
+  { name: 'Corte', value: 45 },
+  { name: 'Kids', value: 45 },
+  { name: 'Corte Máquina', value: 30 },
   { name: 'Barba Express', value: 30 },
-  { name: 'Barboterapia (Ozônio)', value: 35 },
+  { name: 'Barboterapia (Ozônio)', value: 40 },
   { name: 'Sobrancelha', value: 15 },
-  { name: 'Acabamento (Pezinho)', value: 18 },
-  { name: 'Corte Infantil', value: 40 },
-  { name: 'Hidratação', value: 20 },
-  { name: 'Terapia Cone Hindu', value: 34.90 },
-  { name: 'Camuflagem', value: 20 },
-  { name: 'Tintura', value: 35 },
-  { name: 'Limpeza Facial', value: 40 },
+  { name: 'Acabamento (Pezinho)', value: 20 },
+  { name: 'Hidratação Cabelo', value: 19.9 },
+  { name: 'Hidratação Barba', value: 14.9 },
+  { name: 'Camuflagem Cabelo', value: 34.9 },
+  { name: 'Camuflagem Barba', value: 19.9 },
+  { name: 'Relaxamento', value: 39.9 },
+  { name: 'Selagem', value: 69.9 },
+  { name: 'Luzes', value: 84.9 },
   { name: 'Depilação Nasal', value: 24.90 },
-  { name: 'Selagem', value: 70 },
-  { name: 'Luzes', value: 85 },
-  { name: 'Relaxamento', value: 40 },
+  { name: 'Terapia Cone Hindu', value: 34.99 },
 ]
 
 export const samuelPedroPrices = [...diegoPrices].map(({ value, ...rest }, i) => ({
   ...rest,
-  value: i === 0 || i === 5 ? 35 : value,
+  value: i === 0 || i === 1 || i == 2 ? value - 5 : value,
 }))
 
 export const ramonPrices = [...diegoPrices].map(({ value, ...rest }, i) => ({
   ...rest,
-  value: i === 0 || i === 5 ? 30 : value,
+  value: i === 0 || i === 1 || i == 2 ? value - 5 : value,
 }))
 
 
@@ -66,9 +67,6 @@ export const variablePrices = [
   'Luzes',
   'Selagem',
   'Relaxamento',
-  'Limpeza Facial',
-  'Tintura',
-  'Hidratação',
 ]
 
 
@@ -84,7 +82,6 @@ export const services: Service[] = [
   {
     name: 'Barba Express',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
-
     description: 'Agilidade e estilo em um serviço rápido e preciso de barbear.',
     image: Barba,
     duration: 40,
@@ -111,16 +108,37 @@ export const services: Service[] = [
     duration: 40,
   },
   {
-    name: 'Corte Infantil',
+    name: 'Kids',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Cuidado e estilo para os pequenos, proporcionando cortes adaptados às crianças.',
     image: Infantil,
     duration: 40,
   },
   {
-    name: 'Hidratação',
+    name: 'Hidratação Cabelo',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
-    description: 'Restaure a vitalidade dos seus cabelos com nossos tratamentos de hidratação profunda.',
+    description: 'Restaure o brilho e força dos seus cabelos com nossos tratamentos de hidratação profunda.',
+    image: Hidratacao,
+    duration: 40,
+  },
+  {
+    name: 'Hidratação Barba',
+    icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
+    description: 'Restaure a vitalidade da sua barba com nossos tratamentos de hidratação profunda.',
+    image: Hidratacao,
+    duration: 40,
+  },
+  {
+    name: 'Camuflagem Cabelo',
+    icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
+    description: 'Cobre fios brancos do cabelo de forma sutil e natural.',
+    image: Hidratacao,
+    duration: 40,
+  },
+  {
+    name: 'Camuflagem Barba',
+    icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
+    description: 'Disfarça fios brancos, mantendo a cor natural da barba.',
     image: Hidratacao,
     duration: 40,
   },
@@ -140,23 +158,9 @@ export const services: Service[] = [
   },
   {
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
-    name: 'Tintura',
-    description: 'Explore novas cores e realce sua personalidade com nossos serviços de tintura.',
-    image: Tintura,
-    duration: 40,
-  },
-  {
-    icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     name: 'Terapia Cone Hindu',
     description: 'Revitalize mente e corpo com a terapia cone hindu, uma experiência única de bem-estar.',
     image: Cone,
-    duration: 40,
-  },
-  {
-    icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
-    name: 'Limpeza Facial',
-    description: 'Renove sua pele com uma limpeza profunda e relaxante, deixando-a radiante.',
-    image: Pele,
     duration: 40,
   },
   {
@@ -320,6 +324,58 @@ export const plans: Plan[] = [
     ]
   },
   {
+    name: 'Gold',
+    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/gold/15',
+    price: 94.90,
+    description: 'Escolha um plano que combine com você.',
+    benefits: [
+      {
+        name: 'Corte ilimitado (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Barba ilimitada (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho (seg a quarta)',
+        active: false,
+      },
+      {
+        name: 'Corte ilimitado',
+        active: true,
+      },
+      {
+        name: 'Barba Express ilimitada',
+        active: false,
+      },
+      {
+        name: 'Acabamento pezinho ilimitado',
+        active: true,
+      },
+      {
+        name: 'Desconto em Produtos e Serviços',
+        active: true,
+      },
+      {
+        name: 'Benefícios com mais de 30.000 Empresas',
+        active: true,
+      },
+      {
+        name: 'TV Gratuita no App',
+        active: true,
+      },
+      {
+        name: 'Sorteios Exclusivos',
+        active: true,
+      },
+      {
+        name: 'Intransferível',
+        active: true,
+      },
+    ]
+  },
+  {
     name: 'Black',
     source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/black/17',
     price: 154.90,
@@ -423,60 +479,6 @@ export const plans: Plan[] = [
       },
     ]
   },
-  {
-    name: 'Gold',
-    source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/gold/15',
-    price: 94.90,
-    description: 'Escolha um plano que combine com você.',
-    benefits: [
-      {
-        name: 'Corte ilimitado (seg a quarta)',
-        active: false,
-      },
-      {
-        name: 'Barba ilimitada (seg a quarta)',
-        active: false,
-      },
-      {
-        name: 'Acabamento pezinho (seg a quarta)',
-        active: false,
-      },
-      {
-        name: 'Corte ilimitado',
-        active: true,
-      },
-      {
-        name: 'Barba Express ilimitada',
-        active: false,
-      },
-      {
-        name: 'Acabamento pezinho ilimitado',
-        active: true,
-      },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
-      {
-        name: 'Benefícios com mais de 30.000 Empresas',
-        active: true,
-      },
-      {
-        name: 'TV Gratuita no App',
-        active: true,
-      },
-      {
-        name: 'Sorteios Exclusivos',
-        active: true,
-      },
-      {
-        name: 'Intransferível',
-        active: true,
-      },
-    ]
-  },
-
-
 ]
 
 type Professional = {
@@ -491,7 +493,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Diego',
     lastName: 'Nery',
-    picture: require('../assets/images/Diego.png'),
+    picture: require('../assets/images/professionals/diego1.jpg'),
     portfolio: [
 
     ],
@@ -500,7 +502,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Samuel',
     lastName: 'Tadeu',
-    picture: require('../assets/images/SamuelTadeu.png'),
+    picture: require('../assets/images/professionals/samuel1.jpg'),
     portfolio: [
 
     ],
@@ -509,7 +511,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Samuel',
     lastName: 'Pedro',
-    picture: require('../assets/images/SamuelPedro.png'),
+    picture: require('../assets/images/professionals/samuelpedro1.jpg'),
     portfolio: [
 
     ],
@@ -518,7 +520,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Igor',
     lastName: 'Augustus',
-    picture: require('../assets/images/Igor.png'),
+    picture: require('../assets/images/professionals/igor1.jpg'),
     portfolio: [
 
     ],
@@ -528,7 +530,7 @@ export const professionals: Professional[] = [
   {
     firstName: 'Ramon',
     lastName: 'Eduardo',
-    picture: require('../assets/images/Ramon.png'),
+    picture: require('../assets/images/professionals/ramon1.jpg'),
     portfolio: [
 
     ],
@@ -538,12 +540,28 @@ export const professionals: Professional[] = [
   {
     firstName: 'Janielle',
     lastName: 'Paixão',
-    picture: require('../assets/images/Janielle.png'),
+    picture: require('../assets/images/professionals/janielle1.jpg'),
+    portfolio: [
+    ],
+    priceTable: samuelTadeuPrices
+  },
+  {
+    firstName: 'Gabriel',
+    lastName: 'Santos',
+    picture: require('../assets/images/professionals/gabriel1.jpg'),
     portfolio: [
 
     ],
-    priceTable: samuelTadeuPrices
+    priceTable: ramonPrices
 
+  },
+  {
+    firstName: 'Pierre',
+    lastName: 'Rocha',
+    picture: require('../assets/images/professionals/pierre1.jpg'),
+    portfolio: [
+    ],
+    priceTable: samuelTadeuPrices
   },
 ]
 
@@ -556,5 +574,4 @@ export const barberPics: any[] = [
   require('../assets/images/Hidratacao.jpg'),
   require('../assets/images/Barba.jpg'),
   require('../assets/images/Selagem.jpg'),
-
 ]

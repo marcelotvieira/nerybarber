@@ -168,6 +168,7 @@ a {
   display: flex !important;
   align-items: center;
   padding: 0 20%;
+  margin-bottom: -1px;
 
   &.pres2 {
     background: linear-gradient(rgba(15, 15, 15, 1), rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 1)), url(./assets/images/new_shop1.jpg);
@@ -230,9 +231,11 @@ a {
     border: 1px solid transparent;
     border-radius: .2rem;
     transition: .2s;
+    font-size: 14px;
 
     .anticon {
       opacity: .35;
+      font-size: 16px;
 
       &.anticon-check-circle {
         opacity: 1 !important;
@@ -373,8 +376,6 @@ h2 {
 
   &.structure {
     padding: 2rem 0;
-    // border: 1px solid white;
-    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(./assets/images/Barbearia2.jpeg);
     background-size: cover;
     background-position: center;
   }
@@ -668,16 +669,44 @@ h2 {
     }
   }
 
-  img.professional-avatar {
+  .professional-avatar-box {
+    // background-color: rgb(var(--background-rgb));
+    filter: drop-shadow(1.2rem -.2rem 4px black);
+    border: none;
+    border-top: 2px solid rgba(214, 160, 134, 0.466);
+    border-left: 2px solid rgba(214, 160, 134, 0.466);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 2%;
+    transform: rotateZ(45deg);
 
-    filter: drop-shadow(.6rem -.4rem 0px rgba(var(--primary-rgba)));
+    span {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border-top-left-radius: 0;
+      background-image: radial-gradient(rgb(var(--primary-rgba)), rgba(0, 0, 0, 0.493));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  img.professional-avatar {
+    transform: rotateZ(-45deg);
+    filter: drop-shadow(.2rem -.2rem 0px rgba(var(--primary-rgba)));
     object-fit: cover;
-    width: 360px;
-    height: 360px;
-    max-width: 400px;
-    image-rendering: optimizeSpeed;
-    image-orientation: from-image;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    image-rendering: optimizeQuality;
+    // image-rendering: optimizeSpeed;
+    // image-orientation: from-image;
     border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.459);
   }
 }
 
@@ -704,7 +733,15 @@ span.anticon {
 .professionals-resume {
   padding: 3rem 0;
   background: linear-gradient(rgba(15, 15, 15, 0.95), rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.95)), url(../src/assets/images/logo.png);
-  background-size: 220px;
+  background-size: 180px;
+}
+
+.professionals-resume-box {
+  padding: 0 2rem 0 2rem;
+  justify-items: center !important;
+  justify-content: center !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -803,13 +840,8 @@ ul {
   .professional {
 
     img.professional-avatar {
-      padding: 1rem;
-      border: 1px solid white;
-
-      filter: drop-shadow(.6rem -.2rem 0px rgb(var(--primary-rgb)));
-
-      width: 280px;
-      height: 280px;
+      width: 220px;
+      height: 220px;
 
     }
   }

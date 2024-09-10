@@ -10,8 +10,17 @@ import { WhatsAppOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
 import { Club } from './Pages/Club'
 import { Professionals } from './Pages/Professionals'
+import AOS from 'aos'
 
 export default function App() {
+
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1300,
+      once: true,
+    })
+  }, [])
+
   return (
     <div>
       <BrowserRouter basename='/'>

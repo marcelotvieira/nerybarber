@@ -151,6 +151,7 @@ a {
   display: flex !important;
   align-items: center;
   padding: 0 20%;
+  margin-bottom: -1px;
 }
 .presentation.pres2 {
   background: linear-gradient(rgb(15, 15, 15), rgba(15, 15, 15, 0.7), rgb(15, 15, 15)), url(./assets/images/new_shop1.jpg);
@@ -202,9 +203,11 @@ a {
   border: 1px solid transparent;
   border-radius: 0.2rem;
   transition: 0.2s;
+  font-size: 14px;
 }
 .plans .column .anticon {
   opacity: 0.35;
+  font-size: 16px;
 }
 .plans .column .anticon.anticon-check-circle {
   opacity: 1 !important;
@@ -318,7 +321,6 @@ h2 {
 
 .about.structure {
   padding: 2rem 0;
-  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(./assets/images/new_shop1.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -528,16 +530,40 @@ h2 {
 .professional table td {
   padding: 0 0.5rem;
 }
+.professional .professional-avatar-box {
+  filter: drop-shadow(1.2rem -0.2rem 4px black);
+  border: none;
+  border-top: 2px solid rgba(214, 160, 134, 0.466);
+  border-left: 2px solid rgba(214, 160, 134, 0.466);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 2%;
+  transform: rotateZ(45deg);
+}
+.professional .professional-avatar-box span {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+  background-image: radial-gradient(rgb(var(--primary-rgba)), rgba(0, 0, 0, 0.493));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .professional img.professional-avatar {
-  filter: drop-shadow(0.6rem -0.4rem 0px rgba(var(--primary-rgba)));
+  transform: rotateZ(-45deg);
+  filter: drop-shadow(0.2rem -0.2rem 0px rgba(var(--primary-rgba)));
   -o-object-fit: cover;
      object-fit: cover;
-  width: 360px;
-  height: 360px;
-  max-width: 400px;
-  image-rendering: optimizeSpeed;
-  image-orientation: from-image;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  image-rendering: optimizeQuality;
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.459);
 }
 
 span.anticon {
@@ -563,7 +589,15 @@ span.anticon {
 .professionals-resume {
   padding: 3rem 0;
   background: linear-gradient(rgba(15, 15, 15, 0.95), rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.95)), url(../src/assets/images/logo.png);
-  background-size: 220px;
+  background-size: 180px;
+}
+
+.professionals-resume-box {
+  padding: 0 2rem 0 2rem;
+  justify-items: center !important;
+  justify-content: center !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -640,11 +674,8 @@ ul {
     font-size: 1.2rem;
   }
   .professional img.professional-avatar {
-    padding: 1rem;
-    border: 1px solid white;
-    filter: drop-shadow(0.6rem -0.2rem 0px rgb(var(--primary-rgb)));
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
   }
   .plans .column:hover {
     transform: none;

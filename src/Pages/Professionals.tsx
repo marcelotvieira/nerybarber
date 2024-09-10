@@ -33,13 +33,12 @@ export function Professionals() {
 
                 <div className="pd1">
                   <h2>{professional.firstName} {professional.lastName}</h2>
-
                 </div>
 
-                <div>
+                <div className='professional-avatar-box'>
+                  <span></span>
                   <img className="professional-avatar" src={professional.picture} alt={professional.lastName} />
                 </div>
-
 
               </div>
               <Divider dashed type="horizontal" className='mg1' />
@@ -54,7 +53,6 @@ export function Professionals() {
               </p>
 
               <Button type='primary' href="https://cashbarber.com.br/nerybarber" className='btn-enphasys mg1' target="_blank">Agendar</Button>
-
 
               <ul>
                 {
@@ -77,7 +75,6 @@ export function Professionals() {
 
               <Divider dashed type="horizontal" className='mg2' />
 
-
             </div>
           ))
         }
@@ -89,8 +86,6 @@ export function Professionals() {
           href: 'https://cashbarber.com.br/nerybarber',
         }}
       />
-
-
 
     </div>
   )
