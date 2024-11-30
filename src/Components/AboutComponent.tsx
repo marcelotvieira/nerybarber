@@ -90,7 +90,7 @@ export default function AboutComponent({ variant }: Props) {
           <div className="about-structure-container">
             <h1>ESTRUTURA</h1>
             <ul>
-              <li>6 Profissionais altamente capacitados.</li>
+              <li>7 Profissionais altamente capacitados.</li>
               <li>Bar com opções de bebidas.</li>
               <li>Ambiente climatizado.</li>
               <li>Som e vídeo para entretenimento.</li>

@@ -30,7 +30,7 @@ export function Club() {
         </div>
         <Divider dashed type='horizontal' />
 
-        <h2 className="text-centered">TELEMEDICINA</h2>
+        {/* <h2 className="text-centered">TELEMEDICINA</h2>
         <div>
           <div className="container mg2 flex wrappable justified-center aligned-center">
             <div>
@@ -44,7 +44,7 @@ export function Club() {
           </div>
         </div>
 
-        <Divider dashed type='horizontal' />
+        <Divider dashed type='horizontal' /> */}
 
         <h2 className="text-centered">CARTÃO PERSONALIZADO.</h2>
 

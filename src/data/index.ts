@@ -5,11 +5,9 @@ import Corte from '../assets/images/Corte.jpg'
 import Hidratacao from '../assets/images/Hidratacao.jpg'
 import Infantil from '../assets/images/Infantil.jpg'
 import Luzes from '../assets/images/Luzes.jpg'
-import Pele from '../assets/images/Pele.jpg'
 import Relaxamento from '../assets/images/Relaxamento.jpg'
 import Selagem from '../assets/images/Selagem.jpg'
 import Sobrancelha from '../assets/images/Sobrancelha.jpg'
-import Tintura from '../assets/images/Tintura.jpg'
 import Cone from '../assets/images/cone.jpg'
 import Nasal from '../assets/images/Nasal.png'
 
@@ -28,10 +26,10 @@ type Partner = {
 }
 
 const diegoPrices = [
-  { name: 'Corte', value: 45 },
-  { name: 'Kids', value: 45 },
+  { name: 'Corte com Nery', value: 50 },
+  { name: 'Kids', value: 50 },
   { name: 'Corte Máquina', value: 30 },
-  { name: 'Barba Express', value: 30 },
+  { name: 'Barba Express', value: 35 },
   { name: 'Barboterapia (Ozônio)', value: 40 },
   { name: 'Sobrancelha', value: 15 },
   { name: 'Acabamento (Pezinho)', value: 20 },
@@ -43,24 +41,21 @@ const diegoPrices = [
   { name: 'Selagem', value: 69.9 },
   { name: 'Luzes', value: 84.9 },
   { name: 'Depilação Nasal', value: 24.90 },
-  { name: 'Terapia Cone Hindu', value: 34.99 },
+  { name: 'Terapia Cone Hindu', value: 44.99 },
 ]
 
-export const samuelPedroPrices = [...diegoPrices].map(({ value, ...rest }, i) => ({
-  ...rest,
-  value: i === 0 || i === 1 || i == 2 ? value - 5 : value,
-}))
+  
+export const samuelPedroPrices = [{ name: 'Corte', value: 45 }, ...(diegoPrices
+  .map((s, i) => ({
+    ...s,
+    value: i === 1 ? s.value - 5 : s.value 
+  })).slice(1))]
 
-export const ramonPrices = [...diegoPrices].map(({ value, ...rest }, i) => ({
-  ...rest,
-  value: i === 0 || i === 1 || i == 2 ? value - 5 : value,
-}))
-
+export const ramonPrices = samuelPedroPrices
 
 export const samuelTadeuPrices = samuelPedroPrices
 
 export const igorPrices = samuelPedroPrices
-
 
 
 export const variablePrices = [
@@ -222,7 +217,7 @@ export const plans: Plan[] = [
   {
     name: 'Economy',
     source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/economy/19',
-    price: 79.90,
+    price: 89.90,
     description: 'Escolha um plano que combine com você.',
     benefits: [
       {
@@ -249,10 +244,10 @@ export const plans: Plan[] = [
         name: 'Acabamento pezinho ilimitado',
         active: false,
       },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
+      // {
+      //   name: 'Desconto em Produtos e Serviços',
+      //   active: true,
+      // },
       {
         name: 'Benefícios com mais de 30.000 Empresas',
         active: true,
@@ -274,7 +269,7 @@ export const plans: Plan[] = [
   {
     name: 'Prime',
     source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/prime/18',
-    price: 139.90,
+    price: 144.90,
     description: 'Escolha um plano que combina com você.',
     benefits: [
       {
@@ -301,10 +296,10 @@ export const plans: Plan[] = [
         name: 'Acabamento pezinho ilimitado',
         active: false,
       },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
+      // {
+      //   name: 'Desconto em Produtos e Serviços',
+      //   active: true,
+      // },
       {
         name: 'Benefícios com mais de 30.000 Empresas',
         active: true,
@@ -326,7 +321,7 @@ export const plans: Plan[] = [
   {
     name: 'Gold',
     source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/gold/15',
-    price: 94.90,
+    price: 119.90,
     description: 'Escolha um plano que combine com você.',
     benefits: [
       {
@@ -353,10 +348,10 @@ export const plans: Plan[] = [
         name: 'Acabamento pezinho ilimitado',
         active: true,
       },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
+      // {
+      //   name: 'Desconto em Produtos e Serviços',
+      //   active: true,
+      // },
       {
         name: 'Benefícios com mais de 30.000 Empresas',
         active: true,
@@ -378,7 +373,7 @@ export const plans: Plan[] = [
   {
     name: 'Black',
     source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/black/17',
-    price: 154.90,
+    price: 219.90,
     description: 'Escolha um plano que combine com você.',
     benefits: [
       {
@@ -405,10 +400,10 @@ export const plans: Plan[] = [
         name: 'Acabamento pezinho ilimitado',
         active: true,
       },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
+      // {
+      //   name: 'Desconto em Produtos e Serviços',
+      //   active: true,
+      // },
       {
         name: 'Benefícios com mais de 30.000 Empresas',
         active: true,
@@ -430,7 +425,7 @@ export const plans: Plan[] = [
   {
     name: 'Platinum',
     source: 'https://celcash.celcoin.com.br/landingpage3865984/principal/assinar/platinum/16',
-    price: 99.90,
+    price: 109.90,
     description: 'Escolha um plano que combine com você.',
     benefits: [
       {
@@ -457,10 +452,10 @@ export const plans: Plan[] = [
         name: 'Acabamento pezinho ilimitado',
         active: false,
       },
-      {
-        name: 'Desconto em Produtos e Serviços',
-        active: true,
-      },
+      // {
+      //   name: 'Desconto em Produtos e Serviços',
+      //   active: true,
+      // },
       {
         name: 'Benefícios com mais de 30.000 Empresas',
         active: true,
