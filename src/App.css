@@ -656,7 +656,7 @@ ul {
 }
 
 .service-image {
-  filter: hue-rotate(0deg) saturate(140%) brightness(0.85);
+  filter: hue-rotate(0deg) saturate(120%) brightness(0.85);
 }
 
 .service-name-coin {
