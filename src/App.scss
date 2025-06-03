@@ -699,10 +699,10 @@ h2 {
     transform: rotateZ(-45deg);
     filter: drop-shadow(.2rem -.2rem 0px rgba(var(--primary-rgba)));
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     max-width: 300px;
-    image-rendering: optimizeQuality;
+    // image-rendering: optimizeQuality;
     // image-rendering: optimizeSpeed;
     // image-orientation: from-image;
     border-radius: 50%;

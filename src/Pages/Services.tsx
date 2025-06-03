@@ -31,7 +31,8 @@ export default function Services() {
             cover={
               <img
                 className='service-image'
-                height={200}
+                style={{ objectFit: 'cover' }}
+                height={240}
                 alt={service.name}
                 src={service.image}
               />

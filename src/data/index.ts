@@ -1,15 +1,19 @@
 import Acabamento from '../assets/images/Acabamento.jpg'
-import Barba from '../assets/images/Barba.jpg'
-import Barboterapia from '../assets/images/Barboterapia.jpg'
-import Corte from '../assets/images/Corte.jpg'
-import Hidratacao from '../assets/images/Hidratacao.jpg'
-import Infantil from '../assets/images/Infantil.jpg'
+import barba from '../assets/images/barba-express.jpg'
+import barboterapia from '../assets/images/barboterapia.jpg'
+import corte from '../assets/images/corte.jpg'
+import hidratacao from '../assets/images/hidratacao.jpg'
+import hidratacaoBarba from '../assets/images/hidratacao-barba.jpg'
+import camuBarba from '../assets/images/camu-barba.jpg'
+import camuCapilar from '../assets/images/camu-capilar.jpg'
+import kids from '../assets/images/kids.jpg'
 import Luzes from '../assets/images/Luzes.jpg'
-import Relaxamento from '../assets/images/Relaxamento.jpg'
-import Selagem from '../assets/images/Selagem.jpg'
-import Sobrancelha from '../assets/images/Sobrancelha.jpg'
+import alisamento from '../assets/images/alisamento.jpg'
+import selagem from '../assets/images/selagem.jpg'
+import sobrancelha from '../assets/images/sobrancelha.jpg'
 import Cone from '../assets/images/cone.jpg'
 import Nasal from '../assets/images/Nasal.png'
+import limpeza from '../assets/images/limpeza-facial.jpg'
 
 
 type Service = {
@@ -29,19 +33,21 @@ const diegoPrices = [
   { name: 'Corte com Nery', value: 50 },
   { name: 'Kids', value: 50 },
   { name: 'Corte Máquina', value: 30 },
-  { name: 'Barba Express', value: 35 },
+  { name: 'Barba express', value: 35 },
   { name: 'Barboterapia (Ozônio)', value: 40 },
   { name: 'Sobrancelha', value: 15 },
   { name: 'Acabamento (Pezinho)', value: 20 },
-  { name: 'Hidratação Cabelo', value: 19.9 },
-  { name: 'Hidratação Barba', value: 14.9 },
-  { name: 'Camuflagem Cabelo', value: 34.9 },
-  { name: 'Camuflagem Barba', value: 19.9 },
-  { name: 'Relaxamento', value: 39.9 },
-  { name: 'Selagem', value: 69.9 },
+  { name: 'Hidratação capilar', value: 19.9 },
+  { name: 'Hidratação barba', value: 14.9 },
+  { name: 'Camuflagem capilar', value: 39.9 },
+  { name: 'Camuflagem barba', value: 19.9 },
+  { name: 'Alisamento capilar', value: 44.9 },
+  { name: 'Selagem', value: 74.9 },
   { name: 'Luzes', value: 84.9 },
-  { name: 'Depilação Nasal', value: 24.90 },
-  { name: 'Terapia Cone Hindu', value: 44.99 },
+  { name: 'Depilação nasal', value: 24.90 },
+  { name: 'Terapia Cone hindu', value: 44.99 },
+  { name: 'Massagem facial express', value: 19.90 },
+  { name: 'Limpeza facial premium', value: 54.90 },
 ]
 
   
@@ -61,7 +67,7 @@ export const igorPrices = samuelPedroPrices
 export const variablePrices = [
   'Luzes',
   'Selagem',
-  'Relaxamento',
+  'Alisamento capilar',
 ]
 
 
@@ -71,28 +77,28 @@ export const services: Service[] = [
     name: 'Corte',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Transforme seu visual com um corte de cabelo feito sob medida para realçar sua personalidade.',
-    image: Corte,
+    image: corte,
     duration: 40,
   },
   {
     name: 'Barba Express',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Agilidade e estilo em um serviço rápido e preciso de barbear.',
-    image: Barba,
+    image: barba,
     duration: 40,
   },
   {
     name: 'Barboterapia (Ozônio)',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Relaxe enquanto cuidamos da sua barba, proporcionando uma experiência revigorante.',
-    image: Barboterapia,
+    image: barboterapia,
     duration: 40,
   },
   {
     name: 'Sobrancelha',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Destaque seu olhar com um serviço especializado em designer de sobrancelhas masculinas.',
-    image: Sobrancelha,
+    image: sobrancelha,
     duration: 40,
   },
   {
@@ -106,49 +112,49 @@ export const services: Service[] = [
     name: 'Kids',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Cuidado e estilo para os pequenos, proporcionando cortes adaptados às crianças.',
-    image: Infantil,
+    image: kids,
     duration: 40,
   },
   {
-    name: 'Hidratação Cabelo',
+    name: 'Hidratação cabelo',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Restaure o brilho e força dos seus cabelos com nossos tratamentos de hidratação profunda.',
-    image: Hidratacao,
+    image: hidratacao,
     duration: 40,
   },
   {
-    name: 'Hidratação Barba',
+    name: 'Hidratação barba',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Restaure a vitalidade da sua barba com nossos tratamentos de hidratação profunda.',
-    image: Hidratacao,
+    image: hidratacaoBarba,
     duration: 40,
   },
   {
-    name: 'Camuflagem Cabelo',
+    name: 'Camuflagem capilar',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Cobre fios brancos do cabelo de forma sutil e natural.',
-    image: Hidratacao,
+    image: camuCapilar,
     duration: 40,
   },
   {
-    name: 'Camuflagem Barba',
+    name: 'Camuflagem barba',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Disfarça fios brancos, mantendo a cor natural da barba.',
-    image: Hidratacao,
+    image: camuBarba,
     duration: 40,
   },
   {
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     name: 'Selagem',
     description: 'Devolve o brilho, resistência e maciez para seus fios, alisando e fortalecendo seus cabelos.',
-    image: Selagem,
+    image: selagem,
     duration: 40,
   },
   {
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
-    name: 'Relaxamento',
+    name: 'Alisamento capilar',
     description: 'Alise e reduza o volume de seus fios, eliminando a necessidade do uso de chapinhas ou outros métodos de alisamentos temporários.',
-    image: Relaxamento,
+    image: alisamento,
     duration: 40,
   },
   {
@@ -159,7 +165,7 @@ export const services: Service[] = [
     duration: 40,
   },
   {
-    name: 'Depilação Nasal',
+    name: 'Depilação nasal',
     icon: require('../assets/svgs/barber-brush-svgrepo-com.svg'),
     description: 'Utilizando técnicas seguras e eficazes, remova os pelos indesejados da narina, garantindo conforto e higiêne.',
     image: Nasal,
@@ -170,6 +176,13 @@ export const services: Service[] = [
     name: 'Luzes',
     description: 'Ilumine seu visual com destaques precisos de cores que complementam seu estilo.',
     image: Luzes,
+    duration: 40,
+  },
+  {
+    icon: require('../assets/svgs/barbershop-svgrepo-com.svg'),
+    name: 'Limpeza Facial Premium',
+    description: 'Remove impurezas, controla a oleosidade e proporciona uma sensação de frescor e renovação.',
+    image: limpeza,
     duration: 40,
   },
 ]
@@ -495,9 +508,9 @@ export const professionals: Professional[] = [
     priceTable: diegoPrices
   },
   {
-    firstName: 'Samuel',
-    lastName: 'Tadeu',
-    picture: require('../assets/images/professionals/samuel1.jpg'),
+    firstName: 'Eric',
+    lastName: 'Junio',
+    picture: require('../assets/images/professionals/eric.jpg'),
     portfolio: [
 
     ],
@@ -542,7 +555,7 @@ export const professionals: Professional[] = [
   },
   {
     firstName: 'Gabriel',
-    lastName: 'Santos',
+    lastName: 'Rodrigues',
     picture: require('../assets/images/professionals/gabriel1.jpg'),
     portfolio: [
 
