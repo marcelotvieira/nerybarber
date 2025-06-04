@@ -498,15 +498,15 @@ type Professional = {
 }
 
 export const professionals: Professional[] = [
-  {
-    firstName: 'Diego',
-    lastName: 'Nery',
-    picture: require('../assets/images/professionals/diego1.jpg'),
-    portfolio: [
+  // {
+  //   firstName: 'Diego',
+  //   lastName: 'Nery',
+  //   picture: require('../assets/images/professionals/diego1.jpg'),
+  //   portfolio: [
 
-    ],
-    priceTable: diegoPrices
-  },
+  //   ],
+  //   priceTable: diegoPrices
+  // },
   {
     firstName: 'Eric',
     lastName: 'Junio',
